@@ -87,10 +87,10 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to Our Home</h1>
-        <p>We’re so glad to have you here. Click on the icons for quick navigation.</p>
-        <a href="https://jmoney737.github.io/Routine-Activator/" target="_blank" class="smart-home-link">Smart Home Control</a>
-    </header>
+    <h1>Welcome to Our Home</h1>
+    <p>We’re so glad to have you here. Click on the icons for quick navigation.</p>
+    <a href="https://jmoney737.github.io/Routine-Activator/" target="_blank" class="smart-home-link">Smart Home Control</a>
+</header>
 
     <div class="search-bar">
         <input type="text" id="search-input" placeholder="Search for a section...">
