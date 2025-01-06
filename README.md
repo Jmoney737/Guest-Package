@@ -108,7 +108,7 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to Out House</h1>
+        <h1>Welcome to Our Home</h1>
         <p>We’re so glad to have you here. Click on the icons for quick navigation.</p>
         <a href="https://jmoney737.github.io/Routine-Activator/" target="_blank" class="smart-home-link">Smart Home Control</a>
     </header>
@@ -120,62 +120,64 @@
 
     <div class="section">
         <h2>
-            <i class="fas fa-wifi"></i> Wi-Fi Information
+            <i class="fas fa-utensils"></i> Guide to Local Bars and Restaurants
             <button class="toggle-btn" onclick="toggleSection(this)">
                 <i class="fas fa-chevron-down"></i>
             </button>
         </h2>
         <div class="section-content">
             <ul>
-                <li><span>Network Name:</span> KRESS</li>
-                <li><span>Password:</span> 9403950691</li>
+                <li>
+                    <strong>GreenHouse Restaurant and Bar</strong><br>
+                    Enjoy New American cuisine and an award-winning bar. 
+                    <a href="https://greenhouserestaurantdenton.com/" target="_blank">Visit Website</a>
+                </li>
+                <li>
+                    <strong>Rooster's Roadhouse</strong><br>
+                    Casual BBQ and burgers in a relaxed atmosphere. 
+                    <a href="https://roosters-roadhouse.com/" target="_blank">Visit Website</a>
+                </li>
+                <li>
+                    <strong>Barley & Board</strong><br>
+                    A gastropub with craft beers and elevated comfort food. 
+                    <a href="https://www.barleyandboard.com/" target="_blank">Visit Website</a>
+                </li>
             </ul>
         </div>
     </div>
 
     <div class="divider"></div>
 
-    <!-- Additional Sections -->
-    <!-- Omitted for brevity -->
+    <div class="section">
+        <h2>
+            <i class="fas fa-map-marker-alt"></i> Local Attractions
+            <button class="toggle-btn" onclick="toggleSection(this)">
+                <i class="fas fa-chevron-down"></i>
+            </button>
+        </h2>
+        <div class="section-content">
+            <ul>
+                <li>
+                    <strong>Denton Courthouse-on-the-Square Museum</strong><br>
+                    Learn about local history in this iconic courthouse. 
+                    <a href="https://dentoncounty.gov/Departments/Courthouse-on-the-Square" target="_blank">Visit Website</a>
+                </li>
+                <li>
+                    <strong>Ray Roberts Lake State Park</strong><br>
+                    A haven for nature enthusiasts with hiking, biking, and fishing. 
+                    <a href="https://tpwd.texas.gov/state-parks/ray-roberts-lake" target="_blank">Visit Website</a>
+                </li>
+                <li>
+                    <strong>Arts & Jazz Festival</strong><br>
+                    An annual festival featuring live music, art, and local food. 
+                    <a href="https://dentonjazzfest.com/" target="_blank">Visit Website</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
-    <script>
-        function toggleSection(button) {
-            const sectionContent = button.parentElement.nextElementSibling;
+    <div class="divider"></div>
 
-            if (sectionContent.style.maxHeight) {
-                // Collapse section
-                sectionContent.style.maxHeight = null;
-                sectionContent.style.padding = "0";
-                sectionContent.classList.remove('active');
-            } else {
-                // Expand section
-                sectionContent.style.maxHeight = sectionContent.scrollHeight + "px";
-                sectionContent.style.padding = "10px 0";
-                sectionContent.classList.add('active');
-            }
-
-            const icon = button.querySelector('i');
-            if (sectionContent.style.maxHeight) {
-                icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
-            } else {
-                icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
-            }
-        }
-
-        function searchSections() {
-            const query = document.getElementById('search-input').value.toLowerCase();
-            const sections = document.querySelectorAll('.section');
-
-            sections.forEach(section => {
-                const text = section.textContent.toLowerCase();
-                if (text.includes(query)) {
-                    section.style.display = 'block';
-                    section.style.border = '2px solid #A88C7D'; // Highlight match
-                } else {
-                    section.style.display = 'none';
-                }
-            });
-        }
-    </script>
+    <!-- Keep existing sections intact -->
 </body>
 </html>
