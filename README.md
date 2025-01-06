@@ -1,12 +1,4 @@
-![LINT_1](https://github.com/user-attachments/assets/35a86890-8764-4d1c-bd83-26feb01498a6)
-![IMG_6 png](https://github.com/user-attachments/assets/f7567056-b9fc-41e4-ac14-42b3ab688ac4)
-![IMG_2 PNG](https://github.com/user-attachments/assets/86c020a1-06a2-4be8-96a1-266d78b99be7)
-![IMG_1 PNG](https://github.com/user-attachments/assets/de2290fc-bbe8-4b6f-a813-af8dfccd1d18)
-![LINT_2](https://github.com/user-attachments/assets/3ae2f8d5-a2de-4f92-b5c9-357d0fa376c9)
-![LINT_3](https://github.com/user-attachments/assets/0ace38f7-f21d-4584-b473-c1c80103d78e)
-![IMG_4 png](https://github.com/user-attachments/assets/630486de-987a-46c1-aa82-49bba329979e)
-![IMG_3 PNG](https://github.com/user-attachments/assets/6f4657a4-f898-407a-a7f9-fbbedf789aaa)
-![IMG_5 png](https://github.com/user-attachments/assets/4a29b12b-bcb2-4196-bdeb-0783ce745da5)
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -164,13 +156,43 @@
             <ol>
                 <p><strong>Note:</strong> Capsules are to the left in the jar. The automatic motor raises and lowers the machine's head when the lever is pushed up or down.</p>
                 <li>Fill the water tank with fresh drinking water.</li>
+                <img src="https://github.com/user-attachments/assets/86c020a1-06a2-4be8-96a1-266d78b99be7" alt="Fill Water Tank">
                 <li>Turn on the machine by pressing the button.</li>
+                <img src="https://github.com/user-attachments/assets/f7567056-b9fc-41e4-ac14-42b3ab688ac4" alt="Machine Button">
                 <li>GREEN lights will blink while the machine is heating up.</li>
+                <img src="https://github.com/user-attachments/assets/6f4657a4-f898-407a-a7f9-fbbedf789aaa" alt="Heating Indicator">
                 <li>Steady GREEN light indicates the machine is ready.</li>
+                <img src="https://github.com/user-attachments/assets/630486de-987a-46c1-aa82-49bba329979e" alt="Ready Light">
                 <li>Place a cup under the coffee outlet.</li>
+                <img src="https://github.com/user-attachments/assets/de2290fc-bbe8-4b6f-a813-af8dfccd1d18" alt="Place Cup">
                 <li>Open the machine head by pushing the lever up.</li>
+                <img src="https://github.com/user-attachments/assets/0ace38f7-f21d-4584-b473-c1c80103d78e" alt="Open Machine Head">
                 <li>Insert a capsule, dome side down.</li>
+                <img src="https://github.com/user-attachments/assets/4a29b12b-bcb2-4196-bdeb-0783ce745da5" alt="Insert Capsule">
                 <li>Close the lid by pressing the lever down, then press the button to start brewing.</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section" id="lint-filter-cleaning">
+        <h2>
+            <i class="fas fa-filter"></i> Lint Filter Cleaning Instructions
+            <button class="toggle-btn" onclick="toggleSection(this)">
+                <i class="fas fa-chevron-down"></i>
+            </button>
+        </h2>
+        <div class="section-content">
+            <ol>
+                <li>Open the lint filter cover and pull out the lint filter.</li>
+                <img src="https://github.com/user-attachments/assets/35a86890-8764-4d1c-bd83-26feb01498a6" alt="Lint Filter Cover">
+                <li>Avoid removing the rubber seal on the filter.</li>
+                <img src="https://github.com/user-attachments/assets/3ae2f8d5-a2de-4f92-b5c9-357d0fa376c9" alt="Rubber Seal">
+                <li>Separate the outer and inner filters.</li>
+                <img src="https://github.com/user-attachments/assets/0ace38f7-f21d-4584-b473-c1c80103d78e" alt="Separate Filters">
+                <li>Remove lint from both filters.</li>
+                <li>Reassemble the filters and insert them back in place.</li>
             </ol>
         </div>
     </div>
