@@ -9,59 +9,87 @@
         @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Open Sans', sans-serif; line-height: 1.6; color: #333; background-color: #FAF9F6; padding: 20px; }
-        header { text-align: center; margin-bottom: 30px; }
-        header h1 { font-family: 'Great Vibes', cursive; font-size: 3rem; color: #A88C7D; }
-        header p { font-size: 1.2rem; color: #555; }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #e8f5e9;
+            background-image: url('https://www.transparenttextures.com/patterns/green-dust.png');
+            padding: 20px;
+            background-size: cover;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        header h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.5rem;
+            color: #2e7d32;
+        }
+        header p {
+            font-size: 1.3rem;
+            color: #4caf50;
+        }
         .smart-home-link {
             display: inline-block;
             margin-top: 10px;
             padding: 10px 20px;
-            background-color: #A88C7D;
+            background-color: #388e3c;
             color: #FFF;
             font-weight: bold;
             text-decoration: none;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
-        .smart-home-link:hover { background-color: #946b5d; }
+        .smart-home-link:hover {
+            background-color: #2e7d32;
+            transform: scale(1.05);
+        }
         .search-bar {
             max-width: 800px;
             margin: 20px auto;
             display: flex;
             justify-content: center;
+            padding: 10px;
+            background-color: #f1f8e9;
+            border: 1px solid #c8e6c9;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }
         .search-bar input {
             width: 100%;
-            padding: 10px;
-            border: 2px solid #A88C7D;
+            padding: 12px;
+            border: 1px solid #a5d6a7;
             border-radius: 5px 0 0 5px;
+            outline: none;
         }
         .search-bar button {
             padding: 10px;
-            background-color: #A88C7D;
+            background-color: #66bb6a;
             color: #FFF;
             border: none;
             border-radius: 0 5px 5px 0;
             cursor: pointer;
+            transition: background-color 0.3s ease;
         }
-        .search-bar button:hover { background-color: #946b5d; }
-        .section { 
-            background: linear-gradient(135deg, #FFF, #F7F2EE); 
-            border-radius: 10px; 
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-            margin-bottom: 20px; 
-            padding: 20px; 
-            max-width: 800px; 
-            margin-left: auto; 
-            margin-right: auto; 
+        .search-bar button:hover {
+            background-color: #43a047;
+        }
+        .section {
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
         .section h2 {
             font-family: 'Great Vibes', cursive;
-            font-size: 2rem;
-            color: #A88C7D;
-            margin-bottom: 10px;
-            text-align: center;
+            font-size: 2.2rem;
+            color: #2e7d32;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -73,24 +101,40 @@
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.5s ease-out, padding 0.3s ease-out;
+            background-color: #f1f8e9;
+            border: 1px solid #c8e6c9;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 10px;
         }
         .section-content.active {
             max-height: 1000px; /* Arbitrarily large value */
-            padding: 10px 0;
+            padding: 15px;
         }
-        ol, ul { text-align: left; }
-        img { max-width: 100%; border-radius: 5px; margin: 10px 0; }
+        ol, ul {
+            text-align: left;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin: 10px 0;
+            border: 2px solid #a5d6a7;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
         .toggle-btn {
             background: none;
             border: none;
             font-size: 1.5rem;
             cursor: pointer;
-            color: #A88C7D;
-            transition: color 0.3s ease;
+            color: #2e7d32;
+            transition: color 0.3s ease, transform 0.2s ease;
         }
-        .toggle-btn:hover { color: #946b5d; }
+        .toggle-btn:hover {
+            color: #43a047;
+            transform: rotate(180deg);
+        }
         .divider {
-            border-top: 2px solid #DDD;
+            border-top: 2px solid #a5d6a7;
             margin: 20px 0;
         }
     </style>
