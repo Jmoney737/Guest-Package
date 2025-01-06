@@ -25,27 +25,6 @@
             transition: background-color 0.3s ease;
         }
         .smart-home-link:hover { background-color: #946b5d; }
-        .search-bar {
-            max-width: 800px;
-            margin: 20px auto;
-            display: flex;
-            justify-content: center;
-        }
-        .search-bar input {
-            width: 100%;
-            padding: 10px;
-            border: 2px solid #A88C7D;
-            border-radius: 5px 0 0 5px;
-        }
-        .search-bar button {
-            padding: 10px;
-            background-color: #A88C7D;
-            color: #FFF;
-            border: none;
-            border-radius: 0 5px 5px 0;
-            cursor: pointer;
-        }
-        .search-bar button:hover { background-color: #946b5d; }
         .section { 
             background: linear-gradient(135deg, #FFF, #F7F2EE); 
             border-radius: 10px; 
@@ -118,6 +97,7 @@
         <button onclick="searchSections()">Search</button>
     </div>
 
+    <!-- Wi-Fi Information -->
     <div class="section">
         <h2>
             <i class="fas fa-wifi"></i> Wi-Fi Information
@@ -135,6 +115,69 @@
 
     <div class="divider"></div>
 
+    <!-- Guide to Local Bars and Restaurants -->
+    <div class="section">
+        <h2>
+            <i class="fas fa-utensils"></i> Guide to Local Bars and Restaurants
+            <button class="toggle-btn" onclick="toggleSection(this)">
+                <i class="fas fa-chevron-down"></i>
+            </button>
+        </h2>
+        <div class="section-content">
+            <ul>
+                <li>
+                    <strong>GreenHouse Restaurant and Bar</strong><br>
+                    Enjoy New American cuisine and an award-winning bar. 
+                    <a href="https://greenhouserestaurantdenton.com/" target="_blank">Visit Website</a>
+                </li>
+                <li>
+                    <strong>Rooster's Roadhouse</strong><br>
+                    Casual BBQ and burgers in a relaxed atmosphere. 
+                    <a href="https://roosters-roadhouse.com/" target="_blank">Visit Website</a>
+                </li>
+                <li>
+                    <strong>Barley & Board</strong><br>
+                    A gastropub with craft beers and elevated comfort food. 
+                    <a href="https://www.barleyandboard.com/" target="_blank">Visit Website</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Local Attractions -->
+    <div class="section">
+        <h2>
+            <i class="fas fa-map-marker-alt"></i> Local Attractions
+            <button class="toggle-btn" onclick="toggleSection(this)">
+                <i class="fas fa-chevron-down"></i>
+            </button>
+        </h2>
+        <div class="section-content">
+            <ul>
+                <li>
+                    <strong>Denton Courthouse-on-the-Square Museum</strong><br>
+                    Learn about local history in this iconic courthouse. 
+                    <a href="https://dentoncounty.gov/Departments/Courthouse-on-the-Square" target="_blank">Visit Website</a>
+                </li>
+                <li>
+                    <strong>Ray Roberts Lake State Park</strong><br>
+                    A haven for nature enthusiasts with hiking, biking, and fishing. 
+                    <a href="https://tpwd.texas.gov/state-parks/ray-roberts-lake" target="_blank">Visit Website</a>
+                </li>
+                <li>
+                    <strong>Arts & Jazz Festival</strong><br>
+                    An annual festival featuring live music, art, and local food. 
+                    <a href="https://dentonjazzfest.com/" target="_blank">Visit Website</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Appliances & Devices -->
     <div class="section">
         <h2>
             <i class="fas fa-tv"></i> Appliances & Devices
@@ -156,6 +199,7 @@
 
     <div class="divider"></div>
 
+    <!-- Nespresso Coffee Preparation Guide -->
     <div class="section">
         <h2>
             <i class="fas fa-coffee"></i> Nespresso Coffee Preparation Guide
@@ -186,6 +230,7 @@
 
     <div class="divider"></div>
 
+    <!-- Lint Filter Cleaning Instructions -->
     <div class="section" id="lint-filter-cleaning">
         <h2>
             <i class="fas fa-filter"></i> Lint Filter Cleaning Instructions
