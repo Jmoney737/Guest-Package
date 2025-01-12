@@ -389,62 +389,67 @@
     </div>
 </div>
     <script>
-      function toggleDrawer(drawerId) {
-            const drawer = document.getElementById(drawerId);
-            const isActive = drawer.classList.contains('active');
+    function toggleSection(button, sectionId = null) {
+        // Identify the section content to toggle
+        const sectionContent = sectionId 
+            ? document.querySelector(`#${sectionId} .section-content`) 
+            : button.closest('.section').querySelector('.section-content');
 
-            // Collapse all other sections
-            document.querySelectorAll('.section-content').forEach(content => {
-                content.classList.remove('active');
-                content.style.maxHeight = null;
-            });
+        // Check if the section is already active
+        const isActive = sectionContent.classList.contains('active');
 
-            // Toggle selected drawer
-            if (!isActive) {
-                drawer.classList.add('active');
-                drawer.style.maxHeight = drawer.scrollHeight + 'px';
+        // Collapse all other sections
+        document.querySelectorAll('.section-content').forEach(content => {
+            content.classList.remove('active');
+            content.style.maxHeight = null;
+        });
+
+        // Expand the clicked section if it was not active
+        if (!isActive) {
+            sectionContent.classList.add('active');
+            sectionContent.style.maxHeight = sectionContent.scrollHeight + 'px';
+        }
+    }
+
+    function searchSections() {
+        const query = document.getElementById('search-input').value.toLowerCase();
+        document.querySelectorAll('.section').forEach(section => {
+            const text = section.textContent.toLowerCase();
+            if (text.includes(query)) {
+                section.style.display = '';
+            } else {
+                section.style.display = 'none';
             }
+        });
+    }
+
+    async function fetchWeather() {
+        const apiKey = '7841816e864c04d9b862cb645522ca43';
+        const city = 'Denton';
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
+        const weatherDataDiv = document.getElementById('weather-data');
+
+        try {
+            const response = await fetch(url);
+            if (!response.ok) throw new Error('Weather data not found');
+            const data = await response.json();
+
+            weatherDataDiv.innerHTML = `
+                <p><strong>City:</strong> ${data.name}</p>
+                <p><strong>Temperature:</strong> ${data.main.temp} &deg;F</p>
+                <p><strong>Weather:</strong> ${data.weather[0].description}</p>
+                <p><strong>Humidity:</strong> ${data.main.humidity}%</p>
+                <p><strong>Wind Speed:</strong> ${data.wind.speed} mph</p>
+            `;
+        } catch (error) {
+            weatherDataDiv.innerHTML = `<p>Error fetching weather data: ${error.message}</p>`;
         }
+    }
 
-        function searchSections() {
-            const query = document.getElementById('search-input').value.toLowerCase();
-            document.querySelectorAll('.section').forEach(section => {
-                const text = section.textContent.toLowerCase();
-                if (text.includes(query)) {
-                    section.style.display = '';
-                } else {
-                    section.style.display = 'none';
-                }
-            });
-        }
-
-        // Fetch weather data on page load
-        async function fetchWeather() {
-            const apiKey = '7841816e864c04d9b862cb645522ca43';
-            const city = 'Denton';
-            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
-            const weatherDataDiv = document.getElementById('weather-data');
-
-            try {
-                const response = await fetch(url);
-                if (!response.ok) throw new Error('Weather data not found');
-                const data = await response.json();
-
-                weatherDataDiv.innerHTML = `
-                    <p><strong>City:</strong> ${data.name}</p>
-                    <p><strong>Temperature:</strong> ${data.main.temp} &deg;F</p>
-                    <p><strong>Weather:</strong> ${data.weather[0].description}</p>
-                    <p><strong>Humidity:</strong> ${data.main.humidity}%</p>
-                    <p><strong>Wind Speed:</strong> ${data.wind.speed} mph</p>
-                `;
-            } catch (error) {
-                weatherDataDiv.innerHTML = `<p>Error fetching weather data: ${error.message}</p>`;
-            }
-        }
-
-        window.onload = () => {
-            fetchWeather();
-        };
-    </script>
+    // Fetch weather on page load
+    window.onload = () => {
+        fetchWeather();
+    };
+</script>
 </body>
 </html>
