@@ -389,16 +389,20 @@
     </div>
 </div>
     <script>
-        function toggleDrawer(drawerId) {
+      function toggleDrawer(drawerId) {
             const drawer = document.getElementById(drawerId);
             const isActive = drawer.classList.contains('active');
 
+            // Collapse all other sections
             document.querySelectorAll('.section-content').forEach(content => {
                 content.classList.remove('active');
+                content.style.maxHeight = null;
             });
 
+            // Toggle selected drawer
             if (!isActive) {
                 drawer.classList.add('active');
+                drawer.style.maxHeight = drawer.scrollHeight + 'px';
             }
         }
 
