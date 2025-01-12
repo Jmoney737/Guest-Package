@@ -95,15 +95,19 @@
             <p>Loading weather data...</p>
         </div>
     </div>
-<div class="search-bar"> <input type="text" id="search-input" placeholder="Search for a section..."> <button onclick="searchSections()">Search</button> </div>
-    
+
+    <div class="search-bar"> 
+        <input type="text" id="search-input" placeholder="Search for a section..." aria-label="Search for a section"> 
+        <button onclick="searchSections()">Search</button> 
+    </div>
+
     <div class="divider"></div>
 
     <!-- Appliances & Devices -->
     <div class="section">
         <h2>
             <i class="fas fa-tv"></i> Appliances & Devices
-            <button class="toggle-btn" onclick="toggleSection(this)">
+            <button class="toggle-btn" onclick="toggleSection(this)" aria-label="Toggle section">
                 <i class="fas fa-chevron-down"></i>
             </button>
         </h2>
@@ -125,7 +129,7 @@
     <div class="section">
         <h2>
             <i class="fas fa-coffee"></i> Nespresso Coffee Preparation Guide
-            <button class="toggle-btn" onclick="toggleSection(this)">
+            <button class="toggle-btn" onclick="toggleSection(this)" aria-label="Toggle section">
                 <i class="fas fa-chevron-down"></i>
             </button>
         </h2>
@@ -133,17 +137,11 @@
             <ol>
                 <p><strong>Note:</strong> Capsules are to the left in the jar. The automatic motor raises and lowers the machine's head when the lever is pushed up or down.</p>
                 <li>Fill the water tank with fresh drinking water.</li>
-                <img src="https://github.com/user-attachments/assets/b2e02e7d-1c8a-4cee-84ad-52ac8514c588" alt="Fill Water Tank">
                 <li>Turn on the machine by pressing the button.</li>
-                <img src="https://github.com/user-attachments/assets/797a5710-f9b1-4916-a2c6-cb403407c967" alt="Machine Button">
                 <li>GREEN lights will blink while the machine is heating up.</li>
-                <img src="https://github.com/user-attachments/assets/4472e73a-19de-4921-9d1b-0a32f4deea4a" alt="Heating Indicator">
                 <li>Steady GREEN light indicates the machine is ready.</li>
-                <img src="https://github.com/user-attachments/assets/f9577087-ca37-42a7-9068-29e00fcad0f8" alt="Ready Light">
                 <li>Place a cup under the coffee outlet.</li>
-                <img src="https://github.com/user-attachments/assets/1abf0322-36b9-47ab-8629-199779d02c84" alt="Place Cup">
                 <li>Open the machine head by pushing the lever up.</li>
-                <img src="https://github.com/user-attachments/assets/03cb69aa-3172-47e4-9511-84bfad7a0fc4" alt="Open Machine Head">
                 <li>Insert a capsule, dome side down.</li>
                 <li>Close the lid by pressing the lever down, then press the button to start brewing.</li>
             </ol>
@@ -156,30 +154,28 @@
     <div class="section" id="lint-filter-cleaning">
         <h2>
             <i class="fas fa-filter"></i> Lint Filter Cleaning Instructions
-            <button class="toggle-btn" onclick="toggleSection(this)">
+            <button class="toggle-btn" onclick="toggleSection(this)" aria-label="Toggle section">
                 <i class="fas fa-chevron-down"></i>
             </button>
         </h2>
         <div class="section-content">
             <ol>
                 <li>Open the lint filter cover and pull out the lint filter.</li>
-                <img src="https://github.com/user-attachments/assets/26512380-ef32-44d5-ae12-3c88316588c6" alt="Lint Filter Cover">
                 <li>Avoid removing the rubber seal on the filter.</li>
-                <img src="https://github.com/user-attachments/assets/18dacdf1-a21b-4aef-8b52-3ed60f90d134" alt="Rubber Seal">
                 <li>Separate the outer and inner filters.</li>
-                <img src="https://github.com/user-attachments/assets/2c1c4ce0-a6c2-4c5a-9e40-c09a6d7b2394" alt="Separate Filters">
                 <li>Remove lint from both filters.</li>
                 <li>Reassemble the filters and insert them back in place.</li>
             </ol>
         </div>
     </div>
-<div class="divider"></div>
+
+    <div class="divider"></div>
 
     <!-- Guide to Local Bars and Restaurants -->
     <div class="section">
         <h2>
             <i class="fas fa-utensils"></i> Guide to Local Bars and Restaurants
-            <button class="toggle-btn" onclick="toggleSection(this)">
+            <button class="toggle-btn" onclick="toggleSection(this)" aria-label="Toggle section">
                 <i class="fas fa-chevron-down"></i>
             </button>
         </h2>
@@ -210,7 +206,7 @@
     <div class="section">
         <h2>
             <i class="fas fa-map-marker-alt"></i> Local Attractions
-            <button class="toggle-btn" onclick="toggleSection(this)">
+            <button class="toggle-btn" onclick="toggleSection(this)" aria-label="Toggle section">
                 <i class="fas fa-chevron-down"></i>
             </button>
         </h2>
@@ -234,13 +230,14 @@
             </ul>
         </div>
     </div>
-  <div class="divider"></div>
+
+    <div class="divider"></div>
 
     <!-- Left Office Drawer -->
     <div class="section">
         <h2>
             <i class="fas fa-drawer"></i> Left Office Drawer (Image 1)
-            <button class="toggle-btn" onclick="toggleSection(this)">
+            <button class="toggle-btn" onclick="toggleSection(this)" aria-label="Toggle section">
                 <i class="fas fa-chevron-down"></i>
             </button>
         </h2>
@@ -292,7 +289,7 @@
     <div class="section">
         <h2>
             <i class="fas fa-drawer"></i> Right Office Drawer (Image 2)
-            <button class="toggle-btn" onclick="toggleSection(this)">
+            <button class="toggle-btn" onclick="toggleSection(this)" aria-label="Toggle section">
                 <i class="fas fa-chevron-down"></i>
             </button>
         </h2>
@@ -339,7 +336,7 @@
     <div class="section">
         <h2>
             <i class="fas fa-cabinet"></i> Left Office Cabinet (Image 3)
-            <button class="toggle-btn" onclick="toggleSection(this)">
+            <button class="toggle-btn" onclick="toggleSection(this)" aria-label="Toggle section">
                 <i class="fas fa-chevron-down"></i>
             </button>
         </h2>
@@ -367,7 +364,7 @@
     <div class="section">
         <h2>
             <i class="fas fa-cabinet"></i> Right Office Cabinet (Image 4)
-            <button class="toggle-btn" onclick="toggleSection(this)">
+            <button class="toggle-btn" onclick="toggleSection(this)" aria-label="Toggle section">
                 <i class="fas fa-chevron-down"></i>
             </button>
         </h2>
@@ -386,28 +383,9 @@
             <h3>Gaming Supplies:</h3>
             <ul>
                 <li>Stacked board games: Monopoly Builder, Out of Line, 500-piece puzzles</li>
-                <li>Two gaming controllers (black and white)</li>
-                <li>Charging dock for controllers</li>
-            </ul>
-            <h3>Miscellaneous:</h3>
-            <ul>
-                <li>ANEXT cardboard box (possibly for accessories)</li>
-                <li>Clear pump bottles (cleaning solution or sanitizer)</li>
             </ul>
         </div>
     </div>
-
-    <script>
-        function toggleSection(button) {
-            const sectionContent = button.parentElement.nextElementSibling;
-            if (sectionContent.classList.contains('active')) {
-                sectionContent.style.maxHeight = null;
-                sectionContent.classList.remove('active');
-            } else {
-                sectionContent.style.maxHeight = sectionContent.scrollHeight + "px";
-                sectionContent.classList.add('active');
-            }
-        }
 
     <script>
         // Function to fetch weather data
@@ -450,30 +428,3 @@
                 sectionContent.style.maxHeight = sectionContent.scrollHeight + "px";
                 sectionContent.style.padding = "10px 0";
                 sectionContent.classList.add('active');
-            }
-
-            const icon = button.querySelector('i');
-            if (sectionContent.classList.contains('active')) {
-                icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
-            } else {
-                icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
-            }
-        }
-
-        // Function to search sections
-        function searchSections() {
-            const query = document.getElementById('search-input').value.toLowerCase();
-            const sections = document.querySelectorAll('.section');
-
-            sections.forEach(section => {
-                const text = section.textContent.toLowerCase();
-                if (text.includes(query)) {
-                    section.style.display = 'block';
-                } else {
-                    section.style.display = 'none';
-                }
-            });
-        }
-    </script>
-</body>
-</html>
