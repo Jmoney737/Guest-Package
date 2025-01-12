@@ -297,123 +297,112 @@
         <button class="drawer-button" onclick="toggleDrawer('right-cabinet')">Right Office Cabinet</button>
     </div>
 
-    <!-- Left Office Drawer -->
-    <div id="left-drawer" class="section-content">
-        <h3>Left Office Drawer:</h3>
-        <ul>
-            <h4>Writing and Drawing Supplies:</h4>
-            <li>Sharpie markers (various colors)</li>
-            <li>Ballpoint pens (blue and black)</li>
-            <li>Highlighters (multiple colors)</li>
-            <h4>Office Supplies:</h4>
-            <li>Stapler</li>
-            <li>Staples</li>
-            <li>Tape dispenser</li>
-            <li>Scissors</li>
-            <li>Push pins</li>
-            <li>Gold paper clips</li>
-            <li>Binder clips</li>
-            <h4>Small Electronics:</h4>
-            <li>Remote control</li>
-            <li>SD card</li>
-            <h4>Batteries:</h4>
-            <li>Assorted batteries (AA, AAA, etc.)</li>
-            <li>Small battery storage cases</li>
-            <h4>Adhesives and Tools:</h4>
-            <li>Glue bottle</li>
-            <li>Roll of masking tape</li>
-            <li>Knife in a leather sheath</li>
-            <h4>Miscellaneous:</h4>
-            <li>Small plastic containers for organization</li>
-            <li>Packaged hooks or hanging supplies</li>
-            <li>Notepad or sketchpad</li>
-        </ul>
-        <img src="![IMG_4706](https://github.com/user-attachments/assets/34d8df5b-9e33-4c74-a16c-872f71c9dcc8)" alt="Left Drawer" style="width:100%; margin-top:10px;">
-    </div>
+   <!-- Left Office Drawer -->
+<div id="left-drawer" class="section-content">
+    <h3>Left Office Drawer:</h3>
+    <ul>
+        <h4>Writing and Drawing Supplies:</h4>
+        <li>Sharpie markers (various colors)</li>
+        <li>Ballpoint pens (blue and black)</li>
+        <li>Highlighters (multiple colors)</li>
+        <h4>Office Supplies:</h4>
+        <li>Stapler</li>
+        <li>Staples</li>
+        <li>Tape dispenser</li>
+        <li>Scissors</li>
+        <li>Push pins</li>
+        <li>Gold paper clips</li>
+        <li>Binder clips</li>
+        <h4>Small Electronics:</h4>
+        <li>Remote control</li>
+        <li>SD card</li>
+        <h4>Miscellaneous:</h4>
+        <li>Small plastic containers for organization</li>
+    </ul>
+    <img src="https://github.com/user-attachments/assets/34d8df5b-9e33-4c74-a16c-872f71c9dcc8" alt="Left Drawer" style="width:100%; margin-top:10px;">
+</div>
 
-    <!-- Right Office Drawer -->
-    <div id="right-drawer" class="section-content">
-        <h3>Right Office Drawer:</h3>
-        <ul>
-            <h4>Cables and Chargers:</h4>
-            <li>USB, USB-C, and Lightning cables</li>
-            <li>HDMI or auxiliary cables</li>
-            <li>Power cords</li>
-            <li>White power adapters/plugs</li>
-            <li>Coiled extension cords</li>
-            <h4>Electronic Accessories:</h4>
-            <li>USB wall adapters</li>
-            <li>Smart plugs or sockets</li>
-            <li>Circular wireless charging pad</li>
-            <li>Small black hub or adapter</li>
-            <h4>Writing Supplies:</h4>
-            <li>Markers (e.g., Sharpie)</li>
-            <li>Dry-erase markers</li>
-            <h4>Portable Electronics:</h4>
-            <li>JBL portable speaker</li>
-            <li>Earbuds or headphones</li>
-            <li>Small black pouch (likely for accessories)</li>
-            <h4>Miscellaneous:</h4>
-            <li>Bicycle playing cards (two decks)</li>
-            <li>Tape measure (yellow and black)</li>
-            <li>Roll of electrical or duct tape</li>
-            <li>Cylindrical containers (likely for spare parts)</li>
-        </ul>
-        <img src="[IMG_4707](https://github.com/user-attachments/assets/905acb09-4ec7-44d5-b958-a5ad30ed539c)" alt="Right Drawer" style="width:100%; margin-top:10px;">
-    </div>
+<!-- Right Office Drawer -->
+<div id="right-drawer" class="section-content">
+    <h3>Right Office Drawer:</h3>
+    <ul>
+        <h4>Cables and Chargers:</h4>
+        <li>USB, USB-C, and Lightning cables</li>
+        <li>HDMI or auxiliary cables</li>
+        <li>Power cords</li>
+        <li>White power adapters/plugs</li>
+        <li>Coiled extension cords</li>
+        <h4>Electronic Accessories:</h4>
+        <li>USB wall adapters</li>
+        <li>Smart plugs or sockets</li>
+        <li>Circular wireless charging pad</li>
+        <li>Small black hub or adapter</li>
+        <h4>Portable Electronics:</h4>
+        <li>JBL portable speaker</li>
+        <li>Earbuds or headphones</li>
+        <li>Small black pouch (likely for accessories)</li>
+        <h4>Miscellaneous:</h4>
+        <li>Bicycle playing cards (two decks)</li>
+        <li>Tape measure (yellow and black)</li>
+        <li>Roll of electrical or duct tape</li>
+        <li>Cylindrical containers (likely for spare parts)</li>
+    </ul>
+    <img src="https://github.com/user-attachments/assets/905acb09-4ec7-44d5-b958-a5ad30ed539c" alt="Right Drawer" style="width:100%; margin-top:10px;">
+</div>
 
-    <!-- Left Office Cabinet -->
-    <div id="left-cabinet" class="section-content">
-        <h3>Left Office Cabinet:</h3>
-        <ul>
-            <h4>Top Shelf:</h4>
-            <li>Woven basket (contains small items)</li>
-            <li>Aerosol can (possibly compressed air or cleaner)</li>
-            <li>Stacked black trays or storage cases</li>
-            <li>White boxes (likely empty or containing small items)</li>
-            <h4>Bottom Shelf:</h4>
-            <li><strong>Electronics:</strong> Microprocessor tuner/amplifier</li>
-            <li>Charging station (with multiple cables)</li>
-            <h4>Cables and Chargers:</h4>
-            <li>Tangled/organized cables (USB, power cords)</li>
-            <li>Wall adapters</li>
-            <h4>Accessories:</h4>
-            <li>LIFX smart bulb packaging</li>
-            <li>Wicker basket with small items (possibly lenses or tools)</li>
-            <li>Soft pouch</li>
-            <h4>Miscellaneous:</h4>
-            <li>Folded black fabric (with yellow text)</li>
-            <li>Paperwork or manuals</li>
-        </ul>
-    <img src="IMG_4705](https://github.com/user-attachments/assets/3b6cdf12-7ece-4c46-905a-718936d6d734)" alt="Left Cabinet" style="width:100%; margin-top:10px;">
-    </div>
+<!-- Left Office Cabinet -->
+<div id="left-cabinet" class="section-content">
+    <h3>Left Office Cabinet:</h3>
+    <ul>
+        <h4>Top Shelf:</h4>
+        <li>Woven basket (contains small items)</li>
+        <li>Aerosol can (possibly compressed air or cleaner)</li>
+        <li>Stacked black trays or storage cases</li>
+        <li>White boxes (likely empty or containing small items)</li>
+        <h4>Bottom Shelf:</h4>
+        <li><strong>Electronics:</strong> Microprocessor tuner/amplifier</li>
+        <li>Charging station (with multiple cables)</li>
+        <h4>Cables and Chargers:</h4>
+        <li>Tangled/organized cables (USB, power cords)</li>
+        <li>Wall adapters</li>
+        <h4>Accessories:</h4>
+        <li>LIFX smart bulb packaging</li>
+        <li>Wicker basket with small items (possibly lenses or tools)</li>
+        <li>Soft pouch</li>
+        <h4>Miscellaneous:</h4>
+        <li>Folded black fabric (with yellow text)</li>
+        <li>Paperwork or manuals</li>
+    </ul>
+    <img src="https://github.com/user-attachments/assets/3b6cdf12-7ece-4c46-905a-718936d6d734" alt="Left Cabinet" style="width:100%; margin-top:10px;">
+</div>
 
-    <!-- Right Office Cabinet -->
-    <div id="right-cabinet" class="section-content">
-        <h3>Right Office Cabinet:</h3>
+<!-- Right Office Cabinet -->
+<div id="right-cabinet" class="section-content">
+    <h3>Right Office Cabinet:</h3>
+    <ul>
+        <h4>Networking and Smart Devices:</h4>
+        <li>TP-Link Deco Wi-Fi 7 BE10000 (mesh system boxes)</li>
+        <li>Circular Deco devices (part of the mesh system)</li>
+        <li>Wall-mounted networking hub/access point</li>
+        <li>Cables (Ethernet and power)</li>
+        <h4>Large Electronics:</h4>
+        <li>Projector or similar device (silver-gray with vents and cables)</li>
+        <h4>Gaming Supplies:</h4>
+        <li>Stacked board games:</li>
         <ul>
-            <h4>Networking and Smart Devices:</h4>
-            <li>TP-Link Deco Wi-Fi 7 BE10000 (mesh system boxes)</li>
-            <li>Circular Deco devices (part of the mesh system)</li>
-            <li>Wall-mounted networking hub/access point</li>
-            <li>Cables (Ethernet and power)</li>
-            <h4>Large Electronics:</h4>
-            <li>Projector or similar device (silver-gray with vents and cables)</li>
-            <h4>Gaming Supplies:</h4>
-            <li>Stacked board games:</li>
-            <ul>
-                <li>Monopoly Builder</li>
-                <li>Out of Line</li>
-                <li>500-piece puzzles</li>
-            </ul>
-            <li>Two gaming controllers (black and white)</li>
-            <li>Charging dock for controllers</li>
-            <h4>Miscellaneous:</h4>
-            <li>ANEXT cardboard box (possibly for accessories)</li>
-            <li>Clear pump bottles (cleaning solution or sanitizer)</li>
+            <li>Monopoly Builder</li>
+            <li>Out of Line</li>
+            <li>500-piece puzzles</li>
         </ul>
-        <img src="[IMG_4704](https://github.com/user-attachments/assets/2e5ee07a-a166-4622-8434-e97199dd90f0)" alt="Right Cabinet" style="width:100%; margin-top:10px;">
-    </div>
+        <li>Two gaming controllers (black and white)</li>
+        <li>Charging dock for controllers</li>
+        <h4>Miscellaneous:</h4>
+        <li>ANEXT cardboard box (possibly for accessories)</li>
+        <li>Clear pump bottles (cleaning solution or sanitizer)</li>
+    </ul>
+    <img src="https://github.com/user-attachments/assets/2e5ee07a-a166-4622-8434-e97199dd90f0" alt="Right Cabinet" style="width:100%; margin-top:10px;">
+</div>
+
 </div>
    <script>
     function toggleSection(button, sectionId = null) {
