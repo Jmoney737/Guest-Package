@@ -29,6 +29,27 @@
             transition: background-color 0.3s ease;
         }
         .smart-home-link:hover { background-color: #946b5d; }
+        .weather-widget {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, #FFF, #F7F2EE);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .weather-widget i {
+            font-size: 3rem;
+            color: #A88C7D;
+        }
+        .weather-widget div {
+            font-size: 1.2rem;
+            color: #555;
+        }
+        .weather-widget div strong {
+            color: #A88C7D;
+        }
         .section {
             background: linear-gradient(135deg, #FFF, #F7F2EE);
             border-radius: 10px;
@@ -49,14 +70,6 @@
             justify-content: space-between;
             align-items: center;
         }
-        .section h2 i {
-            margin-right: 10px;
-            transition: transform 0.3s ease, color 0.3s ease;
-        }
-        .section h2:hover i {
-            transform: scale(1.2);
-            color: #946b5d;
-        }
         .section-content {
             max-height: 0;
             overflow: hidden;
@@ -65,32 +78,6 @@
         .section-content.active {
             max-height: 1000px;
             padding: 10px 0;
-            background-color: #FFF3E6;
-            border-radius: 5px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-        ol, ul { text-align: left; }
-        img { max-width: 100%; border-radius: 5px; margin: 10px 0; }
-        .toggle-btn {
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: #A88C7D;
-            transition: transform 0.2s ease, color 0.3s ease;
-        }
-        .toggle-btn:active {
-            transform: scale(0.95);
-        }
-        .toggle-btn:hover { color: #946b5d; }
-        .divider {
-            border-top: 2px solid #DDD;
-            margin: 20px 0;
-        }
-        .weather-content {
-            font-size: 1rem;
-            line-height: 1.5;
-            color: #555;
         }
     </style>
 </head>
@@ -101,24 +88,15 @@
         <a href="https://jmoney737.github.io/Routine-Activator/" target="_blank" class="smart-home-link">Smart Home Control</a>
     </header>
 
-    <div class="search-bar">
-        <input type="text" id="search-input" placeholder="Search for a section...">
-        <button onclick="searchSections()">Search</button>
-    </div>
-
-    <!-- Weather Information -->
-    <div class="section">
-        <h2>
-            <i class="fas fa-cloud-sun"></i> Weather Information
-            <button class="toggle-btn" onclick="toggleSection(this)">
-                <i class="fas fa-chevron-down"></i>
-            </button>
-        </h2>
-        <div class="section-content weather-content" id="weather-info">
+    <!-- Weather Widget -->
+    <div class="weather-widget" id="weather-widget">
+        <i class="fas fa-cloud-sun"></i>
+        <div id="weather-data">
             <p>Loading weather data...</p>
         </div>
     </div>
-
+<div class="search-bar"> <input type="text" id="search-input" placeholder="Search for a section..."> <button onclick="searchSections()">Search</button> </div>
+    
     <div class="divider"></div>
 
     <!-- Appliances & Devices -->
