@@ -388,7 +388,7 @@
         </ul>
     </div>
 </div>
-    <script>
+   <script>
     function toggleSection(button, sectionId = null) {
         // Identify the section content to toggle
         const sectionContent = sectionId 
@@ -408,6 +408,23 @@
         if (!isActive) {
             sectionContent.classList.add('active');
             sectionContent.style.maxHeight = sectionContent.scrollHeight + 'px';
+        }
+    }
+
+    function toggleDrawer(drawerId) {
+        const drawer = document.getElementById(drawerId);
+        const isActive = drawer.classList.contains('active');
+
+        // Collapse all other drawers and cabinets
+        document.querySelectorAll('.section-content').forEach(content => {
+            content.classList.remove('active');
+            content.style.maxHeight = null;
+        });
+
+        // Expand the clicked drawer or cabinet if it was not active
+        if (!isActive) {
+            drawer.classList.add('active');
+            drawer.style.maxHeight = drawer.scrollHeight + 'px';
         }
     }
 
