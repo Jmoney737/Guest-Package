@@ -83,31 +83,6 @@
             border-top: 2px solid #DDD;
             margin: 20px 0;
         }
-        .search-bar {
-            max-width: 800px;
-            margin: 0 auto 20px;
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-        #search-input {
-            padding: 10px;
-            border: 1px solid #CCC;
-            border-radius: 5px;
-            flex: 1;
-        }
-        button {
-            background-color: #A88C7D;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        button:hover {
-            background-color: #946b5d;
-        }
     </style>
 </head>
 <body>
@@ -116,29 +91,6 @@
         <p>We’re so glad to have you here. Click on the icons for quick navigation.</p>
         <a href="https://jmoney737.github.io/Routine-Activator/" target="_blank" class="smart-home-link">Smart Home Control</a>
     </header>
-
-    <div class="search-bar">
-        <input type="text" id="search-input" placeholder="Search for a section...">
-        <button onclick="searchSections()">Search</button>
-    </div>
-
-    <div class="divider"></div>
-
-    <!-- Wi-Fi Information -->
-    <div class="section">
-        <h2>
-            <i class="fas fa-wifi"></i> Wi-Fi Information
-            <button class="toggle-btn" onclick="toggleSection(this)">
-                <i class="fas fa-chevron-down"></i>
-            </button>
-        </h2>
-        <div class="section-content">
-            <ul>
-                <li><strong>Network Name:</strong> KRESS</li>
-                <li><strong>Password:</strong> 9403950691</li>
-            </ul>
-        </div>
-    </div>
 
     <div class="divider"></div>
 
@@ -152,21 +104,13 @@
         </h2>
         <div class="section-content">
             <ol>
-                <p><strong>Note:</strong> Capsules are to the left in the jar. The automatic motor raises and lowers the machine's head when the lever is pushed up or down.</p>
                 <li>Fill the water tank with fresh drinking water.</li>
-                <img src="path/to/nespresso-fill-water-tank.jpg" alt="Fill Water Tank">
+                <img src="https://github.com/user-attachments/assets/b2e02e7d-1c8a-4cee-84ad-52ac8514c588" alt="Filling the water tank">
                 <li>Turn on the machine by pressing the button.</li>
-                <img src="path/to/nespresso-power-button.jpg" alt="Power Button">
-                <li>GREEN lights will blink while the machine is heating up.</li>
-                <img src="path/to/nespresso-heating-up.jpg" alt="Heating Up">
-                <li>Steady GREEN light indicates the machine is ready.</li>
-                <img src="path/to/nespresso-ready-light.jpg" alt="Ready Light">
-                <li>Place a cup under the coffee outlet.</li>
-                <img src="path/to/nespresso-place-cup.jpg" alt="Place Cup">
-                <li>Open the machine head by pushing the lever up.</li>
-                <img src="path/to/nespresso-open-head.jpg" alt="Open Machine Head">
-                <li>Insert a capsule, dome side down.</li>
-                <li>Close the lid by pressing the lever down, then press the button to start brewing.</li>
+                <img src="https://github.com/user-attachments/assets/797a5710-f9b1-4916-a2c6-cb403407c967" alt="Power Button">
+                <li>Wait for the GREEN light to stop blinking (heating up).</li>
+                <li>Place a cup under the coffee outlet and brew!</li>
+                <img src="https://github.com/user-attachments/assets/4472e73a-19de-4921-9d1b-0a32f4deea4a" alt="Ready to Brew">
             </ol>
         </div>
     </div>
@@ -183,14 +127,10 @@
         </h2>
         <div class="section-content">
             <ol>
-                <li>Open the lint filter cover and pull out the lint filter.</li>
-                <img src="path/to/lint-filter-cover.jpg" alt="Lint Filter Cover">
-                <li>Avoid removing the rubber seal on the filter.</li>
-                <img src="path/to/lint-filter-seal.jpg" alt="Rubber Seal">
-                <li>Separate the outer and inner filters.</li>
-                <img src="path/to/separate-filters.jpg" alt="Separate Filters">
-                <li>Remove lint from both filters.</li>
-                <li>Reassemble the filters and insert them back in place.</li>
+                <li>Remove the lint filter from the machine.</li>
+                <img src="https://github.com/user-attachments/assets/c313bb1f-ce18-4d0c-ac06-67d153dbc521" alt="Lint Filter Removal">
+                <li>Clean out any lint and reassemble.</li>
+                <img src="https://github.com/user-attachments/assets/3a84ba9e-9ddf-4e19-8328-884cf31cc6ca" alt="Clean Lint Filter">
             </ol>
         </div>
     </div>
@@ -217,16 +157,15 @@
     <script>
         function toggleSection(button) {
             const sectionContent = button.parentElement.nextElementSibling;
+
             if (sectionContent.classList.contains('active')) {
+                sectionContent.style.maxHeight = null;
                 sectionContent.classList.remove('active');
             } else {
+                sectionContent.style.maxHeight = sectionContent.scrollHeight + "px";
                 sectionContent.classList.add('active');
             }
         }
     </script>
 </body>
-</html>![IMG_4701](https://github.com/user-attachments/assets/160a3dee-5f8f-4d3f-9020-dbcac42ab020)
-![IMG_4704](https://github.com/user-attachments/assets/ba7611c7-8c7c-4910-9c4f-641251812e09)
-![IMG_4705](https://github.com/user-attachments/assets/efd384f8-e732-4376-9a04-c35c24e7d7ef)
-![IMG_4706](https://github.com/user-attachments/assets/c313bb1f-ce18-4d0c-ac06-67d153dbc521)
-![IMG_4707](https://github.com/user-attachments/assets/3a84ba9e-9ddf-4e19-8328-884cf31cc6ca)
+</html>
