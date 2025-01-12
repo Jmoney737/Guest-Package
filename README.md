@@ -50,6 +50,34 @@
         .weather-widget div strong {
             color: #A88C7D;
         }
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .search-bar input {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px 0 0 5px;
+            width: 70%;
+        }
+        .search-bar button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #A88C7D;
+            color: #FFF;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .search-bar button:hover { background-color: #946b5d; }
+        .divider {
+            height: 1px;
+            background-color: #ccc;
+            margin: 20px 0;
+        }
         .section {
             background: linear-gradient(135deg, #FFF, #F7F2EE);
             border-radius: 10px;
@@ -96,18 +124,19 @@
         </div>
     </div>
 
-    <div class="search-bar"> 
-        <input type="text" id="search-input" placeholder="Search for a section..." aria-label="Search for a section"> 
-        <button onclick="searchSections()">Search</button> 
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search for a section..." aria-label="Search for a section">
+        <button onclick="searchSections()">Search</button>
     </div>
 
     <div class="divider"></div>
 
-    <!-- Appliances & Devices -->
-    <div class="section">
+    <!-- Example Section -->
+    <div class="section" id="appliances">
         <h2>
             <i class="fas fa-tv"></i> Appliances & Devices
-            <button class="toggle-btn" onclick="toggleSection(this)" aria-label="Toggle section">
+            <button class="toggle-btn" onclick="toggleSection(this, 'appliances')" aria-label="Toggle section">
                 <i class="fas fa-chevron-down"></i>
             </button>
         </h2>
@@ -122,7 +151,7 @@
             </ul>
         </div>
     </div>
-
+    
     <div class="divider"></div>
 
     <!-- Nespresso Coffee Preparation Guide -->
@@ -233,198 +262,110 @@
 
     <div class="divider"></div>
 
-    <!-- Left Office Drawer -->
+    <!-- Combined Section for Drawers and Cabinets -->
     <div class="section">
         <h2>
-            <i class="fas fa-drawer"></i> Left Office Drawer (Image 1)
-            <button class="toggle-btn" onclick="toggleSection(this)" aria-label="Toggle section">
-                <i class="fas fa-chevron-down"></i>
-            </button>
+            <i class="fas fa-drawer"></i> Office Storage
         </h2>
-        <div class="section-content">
-            <h3>Writing and Drawing Supplies:</h3>
+        <div class="drawer-buttons">
+            <button class="drawer-button" onclick="toggleDrawer('left-drawer')">Left Office Drawer</button>
+            <button class="drawer-button" onclick="toggleDrawer('right-drawer')">Right Office Drawer</button>
+            <button class="drawer-button" onclick="toggleDrawer('left-cabinet')">Left Office Cabinet</button>
+            <button class="drawer-button" onclick="toggleDrawer('right-cabinet')">Right Office Cabinet</button>
+        </div>
+        <div id="left-drawer" class="section-content">
+            <h3>Left Office Drawer:</h3>
             <ul>
                 <li>Sharpie markers (various colors)</li>
                 <li>Ballpoint pens (blue and black)</li>
                 <li>Highlighters (multiple colors)</li>
-            </ul>
-            <h3>Office Supplies:</h3>
-            <ul>
                 <li>Stapler</li>
-                <li>Staples</li>
-                <li>Tape dispenser</li>
-                <li>Scissors</li>
-                <li>Push pins</li>
-                <li>Gold paper clips</li>
-                <li>Binder clips</li>
-            </ul>
-            <h3>Small Electronics:</h3>
-            <ul>
-                <li>Remote control</li>
-                <li>SD card</li>
-            </ul>
-            <h3>Batteries:</h3>
-            <ul>
-                <li>Assorted batteries (AA, AAA, etc.)</li>
-                <li>Small battery storage cases</li>
-            </ul>
-            <h3>Adhesives and Tools:</h3>
-            <ul>
-                <li>Glue bottle</li>
-                <li>Roll of masking tape</li>
-                <li>Knife in a leather sheath</li>
-            </ul>
-            <h3>Miscellaneous:</h3>
-            <ul>
                 <li>Small plastic containers for organization</li>
-                <li>Packaged hooks or hanging supplies</li>
-                <li>Notepad or sketchpad</li>
             </ul>
         </div>
-    </div>
-
-    <div class="divider"></div>
-
-    <!-- Right Office Drawer -->
-    <div class="section">
-        <h2>
-            <i class="fas fa-drawer"></i> Right Office Drawer (Image 2)
-            <button class="toggle-btn" onclick="toggleSection(this)" aria-label="Toggle section">
-                <i class="fas fa-chevron-down"></i>
-            </button>
-        </h2>
-        <div class="section-content">
-            <h3>Cables and Chargers:</h3>
+        <div id="right-drawer" class="section-content">
+            <h3>Right Office Drawer:</h3>
             <ul>
                 <li>USB, USB-C, and Lightning cables</li>
                 <li>HDMI or auxiliary cables</li>
-                <li>Power cords</li>
                 <li>White power adapters/plugs</li>
-                <li>Coiled extension cords</li>
-            </ul>
-            <h3>Electronic Accessories:</h3>
-            <ul>
-                <li>USB wall adapters</li>
-                <li>Smart plugs or sockets</li>
-                <li>Circular wireless charging pad</li>
-                <li>Small black hub or adapter</li>
-            </ul>
-            <h3>Writing Supplies:</h3>
-            <ul>
                 <li>Markers (e.g., Sharpie)</li>
-                <li>Dry-erase markers</li>
-            </ul>
-            <h3>Portable Electronics:</h3>
-            <ul>
                 <li>JBL portable speaker</li>
-                <li>Earbuds or headphones</li>
-                <li>Small black pouch (likely for accessories)</li>
-            </ul>
-            <h3>Miscellaneous:</h3>
-            <ul>
-                <li>Bicycle playing cards (two decks)</li>
-                <li>Tape measure (yellow and black)</li>
-                <li>Roll of electrical or duct tape</li>
-                <li>Cylindrical containers (likely for spare parts)</li>
             </ul>
         </div>
-    </div>
-
-    <div class="divider"></div>
-
-    <!-- Left Office Cabinet -->
-    <div class="section">
-        <h2>
-            <i class="fas fa-cabinet"></i> Left Office Cabinet (Image 3)
-            <button class="toggle-btn" onclick="toggleSection(this)" aria-label="Toggle section">
-                <i class="fas fa-chevron-down"></i>
-            </button>
-        </h2>
-        <div class="section-content">
-            <h3>Top Shelf:</h3>
+        <div id="left-cabinet" class="section-content">
+            <h3>Left Office Cabinet:</h3>
             <ul>
                 <li>Woven basket (contains small items)</li>
-                <li>Aerosol can (possibly compressed air or cleaner)</li>
+                <li>Aerosol can (compressed air or cleaner)</li>
                 <li>Stacked black trays or storage cases</li>
-                <li>White boxes (likely empty or containing small items)</li>
-            </ul>
-            <h3>Bottom Shelf:</h3>
-            <ul>
-                <li><strong>Electronics:</strong> Microprocessor tuner/amplifier, Charging station (with multiple cables)</li>
-                <li><strong>Cables and Chargers:</strong> Tangled/organized cables (USB, power cords), Wall adapters</li>
-                <li><strong>Accessories:</strong> LIFX smart bulb packaging, Wicker basket with small items (possibly lenses or tools), Soft pouch</li>
-                <li><strong>Miscellaneous:</strong> Folded black fabric (with yellow text), Paperwork</li>
+                <li>Electronics (e.g., microprocessor tuner/amplifier)</li>
             </ul>
         </div>
-    </div>
-
-    <div class="divider"></div>
-
-    <!-- Right Office Cabinet -->
-    <div class="section">
-        <h2>
-            <i class="fas fa-cabinet"></i> Right Office Cabinet (Image 4)
-            <button class="toggle-btn" onclick="toggleSection(this)" aria-label="Toggle section">
-                <i class="fas fa-chevron-down"></i>
-            </button>
-        </h2>
-        <div class="section-content">
-            <h3>Networking and Smart Devices:</h3>
+        <div id="right-cabinet" class="section-content">
+            <h3>Right Office Cabinet:</h3>
             <ul>
                 <li>TP-Link Deco Wi-Fi 7 BE10000 (mesh system boxes)</li>
-                <li>Circular Deco devices (part of the mesh system)</li>
-                <li>Wall-mounted networking hub/access point</li>
-                <li>Cables (Ethernet and power)</li>
-            </ul>
-            <h3>Large Electronics:</h3>
-            <ul>
+                <li>Circular Deco devices (mesh system)</li>
                 <li>Projector or similar device (silver-gray with vents and cables)</li>
-            </ul>
-            <h3>Gaming Supplies:</h3>
-            <ul>
-                <li>Stacked board games: Monopoly Builder, Out of Line, 500-piece puzzles</li>
+                <li>Stacked board games: Monopoly Builder, Out of Line, puzzles</li>
             </ul>
         </div>
     </div>
 
     <script>
-        // Function to fetch weather data
+        function toggleDrawer(drawerId) {
+            const drawer = document.getElementById(drawerId);
+            const isActive = drawer.classList.contains('active');
+
+            document.querySelectorAll('.section-content').forEach(content => {
+                content.classList.remove('active');
+            });
+
+            if (!isActive) {
+                drawer.classList.add('active');
+            }
+        }
+
+        function searchSections() {
+            const query = document.getElementById('search-input').value.toLowerCase();
+            document.querySelectorAll('.section').forEach(section => {
+                const text = section.textContent.toLowerCase();
+                if (text.includes(query)) {
+                    section.style.display = '';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        }
+
+        // Fetch weather data on page load
         async function fetchWeather() {
             const apiKey = '7841816e864c04d9b862cb645522ca43';
             const city = 'Denton';
             const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
-            const weatherInfo = document.getElementById('weather-info');
+            const weatherDataDiv = document.getElementById('weather-data');
 
             try {
                 const response = await fetch(url);
                 if (!response.ok) throw new Error('Weather data not found');
                 const data = await response.json();
 
-                // Populate weather info
-                weatherInfo.innerHTML = `
+                weatherDataDiv.innerHTML = `
                     <p><strong>City:</strong> ${data.name}</p>
-                    <p><strong>Temperature:</strong> ${data.main.temp} °F</p>
+                    <p><strong>Temperature:</strong> ${data.main.temp} &deg;F</p>
                     <p><strong>Weather:</strong> ${data.weather[0].description}</p>
                     <p><strong>Humidity:</strong> ${data.main.humidity}%</p>
                     <p><strong>Wind Speed:</strong> ${data.wind.speed} mph</p>
                 `;
             } catch (error) {
-                weatherInfo.innerHTML = `<p>Error fetching weather data: ${error.message}</p>`;
+                weatherDataDiv.innerHTML = `<p>Error fetching weather data: ${error.message}</p>`;
             }
         }
 
-        // Fetch weather data on page load
-        window.onload = fetchWeather;
-
-        // Function to toggle sections
-        function toggleSection(button) {
-            const sectionContent = button.parentElement.nextElementSibling;
-
-            if (sectionContent.classList.contains('active')) {
-                sectionContent.style.maxHeight = null;
-                sectionContent.style.padding = "0";
-                sectionContent.classList.remove('active');
-            } else {
-                sectionContent.style.maxHeight = sectionContent.scrollHeight + "px";
-                sectionContent.style.padding = "10px 0";
-                sectionContent.classList.add('active');
+        window.onload = () => {
+            fetchWeather();
+        };
+    </script>
+</body>
+</html>
