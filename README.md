@@ -319,6 +319,7 @@
             <li>Packaged hooks or hanging supplies</li>
             <li>Notepad or sketchpad</li>
         </ul>
+        <img src="https://github.com/user-attachments/assets/5582733c-7da7-4a3d-beb2-f6486764a907" alt="Left Drawer" style="width:100%; margin-top:10px;">
     </div>
 
     <!-- Right Office Drawer -->
@@ -349,6 +350,7 @@
             <li>Roll of electrical or duct tape</li>
             <li>Cylindrical containers (likely for spare parts)</li>
         </ul>
+        <img src="https://github.com/user-attachments/assets/132f388f-5cfa-47ae-977e-62661756fba4" alt="Right Drawer" style="width:100%; margin-top:10px;">
     </div>
 
     <!-- Left Office Cabinet -->
@@ -374,6 +376,7 @@
             <li>Folded black fabric (with yellow text)</li>
             <li>Paperwork or manuals</li>
         </ul>
+    <img src="https://github.com/user-attachments/assets/70f0ccb9-38d2-4f09-9d32-e287ec1fca42" alt="Left Cabinet" style="width:100%; margin-top:10px;">
     </div>
 
     <!-- Right Office Cabinet -->
@@ -400,6 +403,7 @@
             <li>ANEXT cardboard box (possibly for accessories)</li>
             <li>Clear pump bottles (cleaning solution or sanitizer)</li>
         </ul>
+        <img src="https://github.com/user-attachments/assets/7159ab68-f8fb-4b7a-805c-3c0f547703b3" alt="Right Cabinet" style="width:100%; margin-top:10px;">
     </div>
 </div>
    <script>
