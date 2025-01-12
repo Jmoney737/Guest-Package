@@ -116,14 +116,75 @@
         <a href="https://jmoney737.github.io/Routine-Activator/" target="_blank" class="smart-home-link">Smart Home Control</a>
     </header>
 
-    <!-- Weather Widget -->
-    <div class="weather-widget" id="weather-widget">
-        <i class="fas fa-cloud-sun"></i>
-        <div id="weather-data">
-            <p>Loading weather data...</p>
-        </div>
+<!-- Weather Widget -->
+<div class="weather-widget" id="weather-widget">
+    <i class="fas fa-cloud-sun"></i>
+    <div id="weather-data">
+        <p>Loading weather data...</p>
     </div>
+    <div id="forecast" class="forecast">
+        <!-- Forecast will be dynamically populated here -->
+    </div>
+</div>
 
+<script>
+    async function fetchWeather() {
+        const apiKey = '7841816e864c04d9b862cb645522ca43';
+        const city = 'Denton';
+        const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
+        const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=${apiKey}`;
+        const weatherDataDiv = document.getElementById('weather-data');
+        const forecastDiv = document.getElementById('forecast');
+
+        try {
+            // Fetch current weather
+            const weatherResponse = await fetch(weatherUrl);
+            if (!weatherResponse.ok) throw new Error('Weather data not found');
+            const weatherData = await weatherResponse.json();
+
+            weatherDataDiv.innerHTML = `
+                <p><strong>City:</strong> ${weatherData.name}</p>
+                <p><strong>Temperature:</strong> ${weatherData.main.temp} &deg;F</p>
+                <p><strong>Weather:</strong> ${weatherData.weather[0].description}</p>
+                <p><strong>Humidity:</strong> ${weatherData.main.humidity}%</p>
+                <p><strong>Wind Speed:</strong> ${weatherData.wind.speed} mph</p>
+            `;
+
+            // Fetch 5-day forecast
+            const forecastResponse = await fetch(forecastUrl);
+            if (!forecastResponse.ok) throw new Error('Forecast data not found');
+            const forecastData = await forecastResponse.json();
+
+            // Process forecast data for every 8th timestamp (every 24 hours)
+            const dailyForecasts = forecastData.list.filter((_, index) => index % 8 === 0);
+            forecastDiv.innerHTML = `
+                <h3>5-Day Forecast</h3>
+                <ul>
+                    ${dailyForecasts
+                        .map((day) => {
+                            const date = new Date(day.dt * 1000);
+                            const options = { weekday: 'long', month: 'short', day: 'numeric' };
+                            return `
+                                <li>
+                                    <strong>${date.toLocaleDateString('en-US', options)}</strong>
+                                    <p>Temp: ${day.main.temp} &deg;F</p>
+                                    <p>Weather: ${day.weather[0].description}</p>
+                                </li>
+                            `;
+                        })
+                        .join('')}
+                </ul>
+            `;
+        } catch (error) {
+            weatherDataDiv.innerHTML = `<p>Error fetching weather data: ${error.message}</p>`;
+        }
+    }
+
+    // Fetch weather and forecast on page load
+    window.onload = () => {
+        fetchWeather();
+    };
+</script>
     <!-- Search Bar -->
     <div class="search-bar">
         <input type="text" id="search-input" placeholder="Search for a section..." aria-label="Search for a section">
